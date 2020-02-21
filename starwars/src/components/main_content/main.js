@@ -11,27 +11,49 @@ import {
   CardBody
 } from "reactstrap";
 
+import legoImg from "./starwars.jpg";
+
 const Main = props => {
   return (
     <div className="mainContainer">
       <CardDeck>
         <Card>
-          <CardImg top width="100%" src="" alt="Card image cap" />
+          <CardImg top height="50%" src={legoImg} alt="Card image cap" />
           <CardBody>
-            <CardTitle>Card title</CardTitle>
-            <CardSubtitle>Card subtitle</CardSubtitle>
+            <CardTitle>
+              <h2>Name: {props.name}</h2>
+            </CardTitle>
+            <CardSubtitle>
+              <h3>Character Attributes</h3>
+            </CardSubtitle>
             <CardText>
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
+              <p>Height: {props.height}</p>
+            </CardText>
+            <CardText>
+              <p>Mass: {props.mass}</p>
+            </CardText>
+            <CardText>
+              <p>Hair Color: {props.hair_color}</p>
+            </CardText>
+            <CardText>
+              <p>Skin tone: {props.skin_color}</p>
+            </CardText>
+            <CardText>
+              <p>Eye color: {props.eye_color}</p>
+            </CardText>
+            <CardText>
+              <p>Birthyear: {props.birth_year}</p>
+            </CardText>
+            <CardText>
+              <p>Gender: {props.gender}</p>
             </CardText>
             <Button>Button</Button>
           </CardBody>
         </Card>
-        <Card>
+        {/* <Card>
           <CardImg top width="100%" src="" alt="Card image cap" />
           <CardBody>
-            <CardTitle>Card title</CardTitle>
+            <CardTitle>Name: {props.name}</CardTitle>
             <CardSubtitle>Card subtitle</CardSubtitle>
             <CardText>
               This card has supporting text below as a natural lead-in to
@@ -52,7 +74,7 @@ const Main = props => {
             </CardText>
             <Button>Button</Button>
           </CardBody>
-        </Card>
+        </Card> */}
       </CardDeck>
       {/* <CardTitle>
         <CardBody>
